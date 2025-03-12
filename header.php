@@ -7,8 +7,6 @@
 </head>
 <body <?php body_class(); ?>>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, repellat.</p>
-
 <header>
     <section class="top-bar">
         <div class="logo">
@@ -19,8 +17,13 @@
         </div>
     </section>    
     <section class="menu-area">
-        <nav class="main-menu">
-            Menu
-        </nav>
+       
     </section>
+    <div class="container">
+         <nav class="main-menu">
+            <?php wp_nav_menu(
+                array('theme_location' => 'ds_theme_main_menu', 'depth' => 2));
+             ?>
+        </nav>
+    </div>
 </header>
